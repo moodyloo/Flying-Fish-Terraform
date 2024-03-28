@@ -20,7 +20,9 @@ resource "azurerm_windows_web_app" "webapp" {
   location            = azurerm_service_plan.appserviceplan.location
   service_plan_id     = azurerm_service_plan.appserviceplan.id
 
-  site_config {}
+  site_config {
+    always_on = false	
+  }
 }
 
 #  Deploy code from a public GitHub repo
