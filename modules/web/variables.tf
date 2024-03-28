@@ -1,4 +1,4 @@
-variable "ARM_SUBSCRIPTION_ID" {
+variable "TF_VAR_ARM_SUBSCRIPTION_ID" {
   description = "Subscription Id for Azure"
 }
 
