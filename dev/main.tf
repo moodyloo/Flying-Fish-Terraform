@@ -4,6 +4,8 @@ module "dev" {
   environment = {
     name = "dev"
   }
+
+  github_auth = var.github_auth
   
   branch_name = "DEV"
 }
