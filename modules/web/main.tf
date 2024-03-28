@@ -36,6 +36,5 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
       runtime_version = ".NET 8 (LTS)"
     }
 
-    generate_workflow_file {}
   }
 }
