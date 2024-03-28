@@ -1,3 +1,7 @@
+variable "github_auth" {
+  type = string
+}
+
 variable "environment" {
   description = "Development Environment"
 

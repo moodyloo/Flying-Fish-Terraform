@@ -25,7 +25,7 @@ resource "azurerm_windows_web_app" "webapp" {
   }
 }
 
-#  Deploy code from a public GitHub repo
+#  Deploy code from a private GitHub repo
 resource "azurerm_app_service_source_control" "sourcecontrol" {
   app_id             = azurerm_windows_web_app.webapp.id
   repo_url           = "https://github.com/moodyloo/FlyingFishMenuWeb"
@@ -33,8 +33,14 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   github_action_configuration {
     code_configuration {
       runtime_stack = "dotnetcore"
-      runtime_version = ".NET 8 (LTS)"
+      runtime_version = "8.0"
     }
 
   }
+}
+
+resource "azurerm_source_control_token" "source_token" {
+  type         = "GitHub"
+  token        = var.github_auth
+  token_secret = var.github_auth
 }
