@@ -30,4 +30,12 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   app_id             = azurerm_windows_web_app.webapp.id
   repo_url           = "https://github.com/moodyloo/FlyingFishMenuWeb"
   branch             = var.branch_name
+  github_action_configuration = {
+    code_configuration = {
+      runtime_stack = "dotnetcore",
+      runtime_version = ".NET 8 (LTS)"
+    }
+
+    generate_workflow_file = {}
+  }
 }
