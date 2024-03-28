@@ -32,7 +32,7 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   branch             = var.branch_name
   github_action_configuration {
     code_configuration {
-      runtime_stack = "dotnetcore",
+      runtime_stack = "dotnetcore"
       runtime_version = ".NET 8 (LTS)"
     }
 
