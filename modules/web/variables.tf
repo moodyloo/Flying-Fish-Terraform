@@ -1,7 +1,3 @@
-variable "TF_VAR_ARM_SUBSCRIPTION_ID" {
-  description = "Subscription Id for Azure"
-}
-
 variable "environment" {
   description = "Development Environment"
 
