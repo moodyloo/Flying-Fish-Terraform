@@ -15,7 +15,7 @@ resource "azurerm_service_plan" "appserviceplan" {
 
 # Create the web app, pass in the App Service Plan ID
 resource "azurerm_windows_web_app" "webapp" {
-  name                = "example"
+  name                = "${var.resource_group_name}api-${var.environment.name}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_service_plan.appserviceplan.location
   service_plan_id     = azurerm_service_plan.appserviceplan.id
