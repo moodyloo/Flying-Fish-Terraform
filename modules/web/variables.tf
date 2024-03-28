@@ -1,4 +1,4 @@
-variable "subscription_id" {
+variable "ARM_SUBSCRIPTION_ID" {
   description = "Subscription Id for Azure"
 }
 
