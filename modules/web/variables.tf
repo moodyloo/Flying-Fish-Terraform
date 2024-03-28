@@ -1,3 +1,7 @@
+varaible "subscription_id" {
+  description = "Subscription Id for Azure"
+}
+
 variable "environment" {
   description = "Development Environment"
 
