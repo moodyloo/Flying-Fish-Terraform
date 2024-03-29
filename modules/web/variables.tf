@@ -22,3 +22,8 @@ variable "resource_group_name" {
 variable "branch_name" {
   default = "master"
 }
+
+variable "cors_allowed_origins" {
+  type = list(string)
+  default = []
+}
